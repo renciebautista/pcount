@@ -13,7 +13,7 @@ class UploadController extends Controller
     {
         $destinationPath = storage_path().'/uploads/pcount/';
         $fileName = "test.csv";
-        $request->file('data')->move($destinationPath, $fileName);
+        // $request->file('data')->move($destinationPath, $fileName);
     }
 
 }
