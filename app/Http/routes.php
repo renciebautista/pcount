@@ -31,6 +31,8 @@ Route::resource('customer', 'CustomerController');
 
 Route::resource('division', 'DivisionController');
 
+Route::resource('premise', 'PremiseController');
+
 Route::group(array('prefix' => 'api'), function()
 {
 	Route::get('auth', 'Api\AuthUserController@auth');

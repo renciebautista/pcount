@@ -14,6 +14,9 @@ class UploadController extends Controller
         $destinationPath = storage_path().'/uploads/pcount/';
         $fileName = $request->file('data')->getClientOriginalName();
         $request->file('data')->move($destinationPath, $fileName);
+
+        
+        return response()->json(array('msg' => 'file uploaded', 'status' => 0));
     }
 
 }

@@ -16,13 +16,14 @@
 					<li class="dropdown">
 				  		<a href="#" class="dropdown-toggle" data-toggle="dropdown">File Maintenance <span class="caret"></span></a>
 				  		<ul class="dropdown-menu" role="menu">
-				  			<li>{!! link_to_route('customer.index','Customers') !!}</li>
-				  			<li>{!! link_to_route('area.index','Areas') !!}</li>
+				  			
 				  			<li>{!! link_to_route('division.index','Divisions') !!}</li>
 				  			<li>{!! link_to_route('category.index','Categories') !!}</li>
 				  			<li>{!! link_to_route('brand.index','Brands') !!}</li>
 				  			
-				  			
+				  			<li>{!! link_to_route('customer.index','Customers') !!}</li>
+				  			<li>{!! link_to_route('area.index','Areas') !!}</li>
+				  			<li>{!! link_to_route('premise.index','Premises') !!}</li>
 				  			
 				  		</ul>
 					</li>
