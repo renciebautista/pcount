@@ -25,7 +25,7 @@ class UploadSkuMapping extends Seeder
 		DB::table('store_sku')->truncate();
 
 		$reader = ReaderFactory::create(Type::XLSX); // for XLSX files
-		$filePath = 'database/seeds/seed_files/SKU Mapping.XLSX';
+		$filePath = 'database/seeds/seed_files/SKU Mapping.xlsx';
 		$reader->open($filePath);
 
 		foreach ($reader->getSheetIterator() as $sheet) {
