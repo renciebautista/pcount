@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UploadStoreMappingSeeder::class);
         $this->call(UploadUserSeeder::class);
+        $this->call(UploadItemSeeder::class);
         $this->call(UploadSkuMapping::class);
 
         Model::reguard();
