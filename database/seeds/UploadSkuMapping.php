@@ -39,7 +39,7 @@ class UploadSkuMapping extends Seeder
 							if(!empty($premise)){
 								$stores = Store::where('premise_id', $premise->id)->get();
 								$sku = Sku::where('sku_code', $row[3])->first();
-								if(!empty($stores)){
+								if((!empty($stores)) || (!empty($sku))){
 									foreach ($stores as $store) {
 										$store->skus()->attach($sku,array('ig' => $sku->conversion + 20));
 									}
