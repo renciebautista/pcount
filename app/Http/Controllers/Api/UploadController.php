@@ -12,8 +12,8 @@ class UploadController extends Controller
     public function uploadpcount(Request $request)
     {
         $destinationPath = storage_path().'/uploads/pcount/';
-        $fileName = "test.csv";
-        // $request->file('data')->move($destinationPath, $fileName);
+        $fileName = $request->file('data')->getClientOriginalName();
+        $request->file('data')->move($destinationPath, $fileName);
     }
 
 }
