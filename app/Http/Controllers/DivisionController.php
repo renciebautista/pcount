@@ -7,9 +7,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Session;
-use App\Area;
+use App\Division;
 
-class AreaController extends Controller
+class DivisionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +18,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        $areas = Area::orderBy('area')->get();
-        return view('area.index',compact('areas'));
+        $divisions = Division::orderBy('division')->get();
+        return view('division.index', compact('divisions'));
     }
 
     /**

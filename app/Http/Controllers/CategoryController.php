@@ -7,9 +7,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Session;
-use App\Area;
+use App\Category;
 
-class AreaController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +18,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        $areas = Area::orderBy('area')->get();
-        return view('area.index',compact('areas'));
+        $categories = Category::orderBy('category_short')->get();
+        return view('category.index', compact('categories'));
     }
 
     /**

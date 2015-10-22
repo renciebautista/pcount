@@ -7,9 +7,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Session;
-use App\Area;
+use App\Brand;
 
-class AreaController extends Controller
+class BrandController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +18,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        $areas = Area::orderBy('area')->get();
-        return view('area.index',compact('areas'));
+        $brands = Brand::all();
+        return view('brand.index', compact('brands'));   
     }
 
     /**

@@ -18,7 +18,18 @@ Route::get('files', function(){
 });
 
 Route::get("/", "DashboardController@index");
+
 Route::resource('dashboard', 'DashboardController');
+
+Route::resource('area', 'AreaController');
+
+Route::resource('brand', 'BrandController');
+
+Route::resource('category', 'CategoryController');
+
+Route::resource('customer', 'CustomerController');
+
+Route::resource('division', 'DivisionController');
 
 Route::group(array('prefix' => 'api'), function()
 {
