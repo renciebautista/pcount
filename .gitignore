@@ -1,6 +1,8 @@
 /vendor
 /node_modules
 /database/seeds/seed_files
+/storage/uploads/
 Homestead.yaml
 Homestead.json
 .env
+*.txt

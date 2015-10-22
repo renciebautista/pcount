@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('files', function(){
+	foreach (glob(storage_path().'/uploads/pcount/*.*') as $filename) {
+	    echo "$filename size " . filesize($filename) . "\n";
+	}
+});
+
 Route::get("/", "DashboardController@index");
 Route::resource('dashboard', 'DashboardController');
 
@@ -18,5 +24,6 @@ Route::group(array('prefix' => 'api'), function()
 {
 	Route::get('auth', 'Api\AuthUserController@auth');
    	Route::get('download', 'Api\DownloadController@index');
+   	Route::post('uploadpcount', 'Api\UploadController@uploadpcount');
    	
 });//
