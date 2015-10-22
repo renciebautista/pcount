@@ -9,11 +9,12 @@ use App\Http\Controllers\Controller;
 class AuthUserController extends Controller
 {
     public function auth(Request $request){
-        $email = $request->email;
-        $password = $request->pwd;
 
-        if (\Auth::attempt(['email' => $email, 'password' => $password]))
-        {
+        $usernameinput =  $request->email;
+        $password = $request->pwd;
+        $field = filter_var($usernameinput, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        if (\Auth::attempt(array($field => $usernameinput, 'password' => $password), false)) {
             $user = \Auth::user();
             return response()->json($user);
         }else{
