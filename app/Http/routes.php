@@ -33,6 +33,10 @@ Route::resource('division', 'DivisionController');
 
 Route::resource('premise', 'PremiseController');
 
+Route::resource('store', 'StoreController');
+
+Route::resource('sku', 'SkuController');
+
 Route::group(array('prefix' => 'api'), function()
 {
 	Route::get('auth', 'Api\AuthUserController@auth');

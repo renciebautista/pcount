@@ -24,7 +24,8 @@
 				  			<li>{!! link_to_route('customer.index','Customers') !!}</li>
 				  			<li>{!! link_to_route('area.index','Areas') !!}</li>
 				  			<li>{!! link_to_route('premise.index','Premises') !!}</li>
-				  			
+				  			<li>{!! link_to_route('store.index','Stores') !!}</li>
+				  			<li>{!! link_to_route('sku.index','Skus') !!}</li>
 				  		</ul>
 					</li>
 			  	</ul>

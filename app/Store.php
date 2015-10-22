@@ -16,4 +16,16 @@ class Store extends Model
     public function skus(){
     	return $this->belongsToMany('App\Sku', 'store_sku');
     }
+
+    public function customer(){
+    	return $this->belongsTo('App\Customer');
+    }
+
+    public function area(){
+    	return $this->belongsTo('App\Area');
+    }
+
+    public function premise(){
+    	return $this->belongsTo('App\Premise');
+    }
 }
